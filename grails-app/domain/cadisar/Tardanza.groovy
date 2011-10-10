@@ -10,7 +10,6 @@ class Tardanza {
     
     static belongsTo = [Alumno]
     static constraints = {
-        date (blank:false)
         description (blank:false, maxSize:50)
         dia (range:1..31)
         mes (range:1..12)

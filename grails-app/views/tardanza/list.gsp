@@ -8,8 +8,11 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        
-        <div id="pageBody">
+        <div class="nav">
+            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
+            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
+        </div>
+        <div class="body">
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
@@ -21,13 +24,15 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'tardanza.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="date" title="${message(code: 'tardanza.date.label', default: 'Date')}" />
-                        
                             <g:sortableColumn property="description" title="${message(code: 'tardanza.description.label', default: 'Description')}" />
                         
-                            <g:sortableColumn property="justified" title="${message(code: 'tardanza.justified.label', default: 'Justified')}" />
+                            <g:sortableColumn property="dia" title="${message(code: 'tardanza.dia.label', default: 'Dia')}" />
                         
-                            <th><g:message code="tardanza.student.label" default="Student" /></th>
+                            <g:sortableColumn property="mes" title="${message(code: 'tardanza.mes.label', default: 'Mes')}" />
+                        
+                            <g:sortableColumn property="año" title="${message(code: 'tardanza.año.label', default: 'Año')}" />
+                        
+                            <g:sortableColumn property="justified" title="${message(code: 'tardanza.justified.label', default: 'Justified')}" />
                         
                         </tr>
                     </thead>
@@ -37,13 +42,15 @@
                         
                             <td><g:link action="show" id="${tardanzaInstance.id}">${fieldValue(bean: tardanzaInstance, field: "id")}</g:link></td>
                         
-                            <td><g:formatDate date="${tardanzaInstance.date}" /></td>
-                        
                             <td>${fieldValue(bean: tardanzaInstance, field: "description")}</td>
                         
-                            <td><g:formatBoolean boolean="${tardanzaInstance.justified}" /></td>
+                            <td>${fieldValue(bean: tardanzaInstance, field: "dia")}</td>
                         
-                            <td>${fieldValue(bean: tardanzaInstance, field: "student")}</td>
+                            <td>${fieldValue(bean: tardanzaInstance, field: "mes")}</td>
+                        
+                            <td>${fieldValue(bean: tardanzaInstance, field: "año")}</td>
+                        
+                            <td><g:formatBoolean boolean="${tardanzaInstance.justified}" /></td>
                         
                         </tr>
                     </g:each>

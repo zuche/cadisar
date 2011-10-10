@@ -33,25 +33,9 @@ class Alumno {
      "$name"   
     }
     
-  int count(){
-      def lista = Tardanza.findAllByName(this.name)
-      if(lista==null){
-          return 0
-      }else{
-      def today = new GregorianCalendar()
-      def firstDay = new GregorianCalendar()
-      def lastDay = new GregorianCalendar()
-      firstDay.set(Calendar.DAY_OF_MONTH, 1)
-      lastDay.set(Calendar.DAY_OF_MONTH, lastDay.getActualMaximum(GregorianCalendar.DAY_OF_MONTH))
-      def count
-        for(Tardanza tardanza: lista){
-            if(lastDay.before(tardanza.date)){
-                
-            }
-          
-         }
-      }
+  
+      
       
             
-  }
+  
 }

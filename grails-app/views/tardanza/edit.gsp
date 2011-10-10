@@ -33,19 +33,37 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="date"><g:message code="tardanza.date.label" default="Date" /></label>
+                                  <label for="description"><g:message code="tardanza.description.label" default="Description" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'date', 'errors')}">
-                                    <g:datePicker name="date" precision="day" value="${tardanzaInstance?.date}"  />
+                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'description', 'errors')}">
+                                    <g:textField name="description" maxlength="50" value="${tardanzaInstance?.description}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="description"><g:message code="tardanza.description.label" default="Description" /></label>
+                                  <label for="dia"><g:message code="tardanza.dia.label" default="Dia" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'description', 'errors')}">
-                                    <g:textField name="description" maxlength="50" value="${tardanzaInstance?.description}" />
+                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'dia', 'errors')}">
+                                    <g:select name="dia" from="${1..31}" value="${fieldValue(bean: tardanzaInstance, field: 'dia')}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="mes"><g:message code="tardanza.mes.label" default="Mes" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'mes', 'errors')}">
+                                    <g:select name="mes" from="${1..12}" value="${fieldValue(bean: tardanzaInstance, field: 'mes')}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="año"><g:message code="tardanza.año.label" default="Año" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'año', 'errors')}">
+                                    <g:select name="año" from="${2011..3000}" value="${fieldValue(bean: tardanzaInstance, field: 'año')}"  />
                                 </td>
                             </tr>
                         

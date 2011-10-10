@@ -24,7 +24,6 @@ class TardanzaController {
         if (tardanzaInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'tardanza.label', default: 'Tardanza'), tardanzaInstance.id])}"
             redirect(action: "show", id: tardanzaInstance.id)
-            
         }
         else {
             render(view: "create", model: [tardanzaInstance: tardanzaInstance])

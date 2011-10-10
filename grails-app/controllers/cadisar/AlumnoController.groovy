@@ -25,16 +25,6 @@ class AlumnoController {
         render(view: "list", model:[alumnoInstanceList: Alumno.findAllByGrade(params.grade), alumnoInstanceTotal: Alumno.count(), alumnoGrade:grade])
     }
     
-    def listPorTardanzas = {
-        log.debug "parametros $params"
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
-        def listaAlumnos = Alumno.list(params)
-        def listaAlumnosTardanzas = new List()
-        for(Alumno a: listaAlumnos ){
-            
-        }
-        [alumnoInstanceList: , alumnoInstanceTotal: ]
-    }
     
     def create = {
         def alumnoInstance = new Alumno()

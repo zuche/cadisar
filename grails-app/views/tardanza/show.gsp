@@ -30,16 +30,30 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tardanza.date.label" default="Date" /></td>
+                            <td valign="top" class="name"><g:message code="tardanza.description.label" default="Description" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${tardanzaInstance?.date}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "description")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tardanza.description.label" default="Description" /></td>
+                            <td valign="top" class="name"><g:message code="tardanza.dia.label" default="Dia" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "description")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "dia")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="tardanza.mes.label" default="Mes" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "mes")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="tardanza.año.label" default="Año" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "año")}</td>
                             
                         </tr>
                     
