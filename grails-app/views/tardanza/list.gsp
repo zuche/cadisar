@@ -30,7 +30,7 @@
                         
                             <g:sortableColumn property="mes" title="${message(code: 'tardanza.mes.label', default: 'Mes')}" />
                         
-                            <g:sortableColumn property="año" title="${message(code: 'tardanza.año.label', default: 'Año')}" />
+                            <g:sortableColumn property="ano" title="${message(code: 'tardanza.ano.label', default: 'Ano')}" />
                         
                             <g:sortableColumn property="justified" title="${message(code: 'tardanza.justified.label', default: 'Justified')}" />
                         
@@ -48,7 +48,7 @@
                         
                             <td>${fieldValue(bean: tardanzaInstance, field: "mes")}</td>
                         
-                            <td>${fieldValue(bean: tardanzaInstance, field: "año")}</td>
+                            <td>${fieldValue(bean: tardanzaInstance, field: "ano")}</td>
                         
                             <td><g:formatBoolean boolean="${tardanzaInstance.justified}" /></td>
                         

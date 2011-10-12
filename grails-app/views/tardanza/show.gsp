@@ -51,9 +51,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="tardanza.año.label" default="Año" /></td>
+                            <td valign="top" class="name"><g:message code="tardanza.ano.label" default="Ano" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "año")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: tardanzaInstance, field: "ano")}</td>
                             
                         </tr>
                     

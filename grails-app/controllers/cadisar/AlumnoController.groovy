@@ -24,7 +24,18 @@ class AlumnoController {
         //[alumnoInstanceList: Alumno.findAllByGrade(params.grade), alumnoInstanceTotal: Alumno.count()]
         render(view: "list", model:[alumnoInstanceList: Alumno.findAllByGrade(params.grade), alumnoInstanceTotal: Alumno.count(), alumnoGrade:grade])
     }
-    
+    def listalumnotardanza = {
+        System.out.println "Entramos a listaalumnotardanza"
+    def lista = new ArrayList()   
+       for(def alumno:Alumno.findAll()){
+           def date = new Date()
+           if(2<=Tardanza.findAll("from Tardanza as t where t.mes = :mes and student_id= :id ",[mes:1,  id:alumno.id] ).size()){
+              lista.add(alumno)
+           }
+
+        }
+    render(view: "list", model:[alumnoInstanceList: lista, alumnoInstanceTotal: Alumno.count()])    
+    }
     
     def create = {
         def alumnoInstance = new Alumno()

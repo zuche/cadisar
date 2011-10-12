@@ -32,10 +32,6 @@ class Alumno {
     String toString(){
      "$name"   
     }
-    
-  
-      
-      
-            
+               
   
 }

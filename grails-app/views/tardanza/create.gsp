@@ -57,10 +57,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="año"><g:message code="tardanza.año.label" default="Año" /></label>
+                                    <label for="ano"><g:message code="tardanza.ano.label" default="Ano" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'año', 'errors')}">
-                                    <g:select name="año" from="${2011..3000}" value="${fieldValue(bean: tardanzaInstance, field: 'año')}"  />
+                                <td valign="top" class="value ${hasErrors(bean: tardanzaInstance, field: 'ano', 'errors')}">
+                                    <g:select name="ano" from="${2011..3000}" value="${fieldValue(bean: tardanzaInstance, field: 'ano')}"  />
                                 </td>
                             </tr>
                         

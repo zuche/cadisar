@@ -95,7 +95,4 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'cadisar.Usuario'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'cadisar.UsuarioRol'
 grails.plugins.springsecurity.authority.className = 'cadisar.Rol'
 
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'cadisar.Usuario'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'cadisar.UsuarioRol'
-grails.plugins.springsecurity.authority.className = 'cadisar.Rol'
+
